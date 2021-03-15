@@ -31,7 +31,7 @@ mongoose.set("useCreateIndex", true);
 
 
 var store = new MongoDbStore({
-    uri: process.env.uri,
+    uri: process.env.mongodb_uri,
     collection: 'mySessions'
   });
 
