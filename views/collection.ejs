@@ -1,0 +1,21 @@
+<%- include('header') %>
+<div class ="container">
+
+    <h2 class="heading-title text-center">Your favourite food collection appears here</h2>
+    <br>
+    <div class="container">
+        <% cllectins.forEach((item) => { %>
+            <form action="/delete" method = "POST" class="frmClass">
+            <div class="card" style = "width: 15rem; height: 20rem;">
+                <img src="<%= item.img %>" alt="" height = "200" width ="239">
+                <div class="card-body">
+                   <a href="/recipe/<%= item.label%>" type = "submit"> <%= item.label%></a>
+                   <button class="btn btn-secondary btnTrash"><i class="fas fa-trash" data-toggle="tooltip" data-placement="bottom" title="remove from collection" onClick = "this.form.submit()"></i></button>
+                   <input type="hidden" name="recipe" value="<%= item._id %>">
+                </div>
+              </div>
+            </form>
+       <% }) %>
+    </div>
+ </div>
+<%- include('footer') %> 

@@ -1,0 +1,66 @@
+<%- include('header') -%> 
+
+<div class = 'fluid-container'>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 recipe-info">
+                <p class="label"><%= label %> </p>
+                <p class="urlLabel">Get your full recipe 👇 </p>
+                <a href="<%= recipeUrl %> " class="recipeUrl"> <%= label %></a><br>     
+           
+                <form action = "/collection" method="POST"> 
+                <button type="submit" class="btn btn-success cllectin"
+                 name="label" value="<%= label %>" >
+                 <i class="fad fa-bookmark"></i>  Add to Collection </button>
+                </form>
+         </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 recipeCntainer">
+            <img src="<%= recipeImg %> " alt=""  class="recipeImg" height="260" width="320">
+         </div>
+
+         <div id="ingredient-sectin">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+
+                    <div class="ingredients">
+                        <p class="title">Ingredients</p>
+                        <% ingredients.forEach((ingredient) => { %>
+                             <ul>
+                                 <li><%= ingredient %></li>
+                             </ul>
+                         <%})%>
+                    </div>
+                 
+                    <div class="healthLabel">
+                        <p  class="title">Health Labels</p>
+                        <% healthLabels.forEach((healthLabel) => { %>
+                        <ul>
+                            <li><%= healthLabel %></li>
+                        </ul>
+                    <%})%>
+                    </div>
+                    
+                    <div class="calrie">
+                        <p  class="title">Calories</p>
+                        <p><%= calries %> </p>
+                    </div>
+                    
+                    <div class="nutrient">
+                        <p  class="title">Nutrients</p>
+                        <% for(var i in ttalNutrients){%>
+                            <div class="nutrientValue">
+                                <p><span class="nutrientLabel"><%= ttalNutrients[i].label %> : </span></p>
+                            <p> <%= ttalNutrients[i].quantity %><%= ttalNutrients[i].unit%></p>
+                            </div>
+                            
+                        <%}%>
+                    </div>
+                
+                </div>
+          </div>
+     </div>
+</div>
+
+<div class="footer">
+    <p>Made with ❤️ by Vasanti</p>
+  </div>
+<%- include('footer') -%> 

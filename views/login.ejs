@@ -1,0 +1,36 @@
+<%- include('header') -%>
+
+<!--  -->
+<div class="signContainer mt-3">
+    <h2 class="text-center text-info">Login</h2>
+  
+        <div class="card mx-auto">
+          <div class="card-body">
+          
+            <!-- Makes POST request to /register route -->
+          
+            <form action="/login" method="POST">
+              <% if(message.error) { %>
+                <small class="text-danger"><%= message.error %></small>
+                <% } %>
+              <div class="form-group">
+                <input type="email" placeholder="email" class="form-control email" required name="username">
+              </div>
+              <div class="form-group">
+                <input type="password" placeholder="**********" class="form-control password" onkeyup="manage(this)" name="password">
+              </div>
+              <button type="submit" class="btn btn-md w-100 btn-outline-success btSubmit" disabled>Login</button><br>
+              <p class="text-muted text-center">or</p>
+
+              <a class="btn btn-block btn-social btn-google" href="/auth/google" role="button">
+                <i class="fab fa-google"></i>
+              Continue with Google
+              </a>
+            </form>
+           </div>
+        </div>
+        <div class="mx-auto text-center">
+          <a href="#">Don't have an account?</a><span><a href="/register">Sign up</a></span>
+      </div>
+   </div>
+  <%- include('footer') -%>

@@ -1,0 +1,196 @@
+.body{
+    display:flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+.header{
+    margin: 1%;
+    text-align : center;
+}
+.heading-title{
+    padding: 1.5%;
+    font-family: 'Noto Serif', serif;
+    font-size: 2.3rem;
+    color:#6a2c70;
+    font-weight: 600;
+}
+.inputArea{
+    border-radius: 20px;
+    width: 50%;
+    padding: 0.61%;
+    text-align: center;
+}     
+.inputArea:focus{
+    outline:0;
+}
+.navbar{
+    background-color:#83f76c;
+    padding: 5px 0;    
+    min-height: 12px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.11);
+}
+.navbar-brand{
+    color : white;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-left: 3em;
+    font-size: 1.5rem;
+    line-height: 6%;
+    font-weight: 700;
+}
+.navbar ul{
+    margin : 0 8%;
+    padding-left: 11%;
+}
+.navbar-toggler-icon{
+    color: white;
+}
+ul li, .urlLabel{
+    font-size : 1.1rem;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    cursor: pointer;
+}
+.frmClass{
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3%;
+    cursor: pointer;
+}
+.recipe-info{
+    margin-top: 22px;
+    right: auto;
+    left: 100px;
+}
+.label{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.5rem;
+    color: #413c69;
+}
+.card{
+    margin : 2%;
+    max-width: 23rem;
+}
+
+.cllectin{
+    margin-top: 5%;
+    text-align: left;
+}
+.recipeUrl{
+    font-size: 1.3rem;
+}
+.recipeCntainer{
+    padding: 3%;
+    padding-left : 12%;
+}
+.recipeImg{
+    border: 8px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#ingredient-sectin{
+    margin : 3% 0 10% 10%;
+}
+#ingredient-sectin .title{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.9rem;
+    color: brown;
+    border-bottom-style: groove;
+}
+.ingredients li, .healthLabel li{
+    padding: 1.4px;
+    font-style: italic;
+}
+.healthLabel , .calrie, .nutrient{
+    margin: 9% 0 0 0;
+}
+.nutrientValue{
+    display: flex;
+}
+.nutrientLabel{
+    font-style: italic;
+    color: blue;
+}
+.footer {
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	background-color: #1abc9c;
+    padding-top: 1px;
+}
+.footer p {
+	margin-top: 12px;
+	font-size: 13px;
+    color: #fff;
+}
+.alert{
+    display : none;
+}
+.btnTrash{
+    position: absolute;
+    right: 5%;
+    bottom: 2%;
+    text-align: center;
+}
+.signContainer{
+    padding-left: 5%;
+}
+
+.signContainer  a{
+    padding-left: 1%;
+}
+
+.signContainer p{
+    padding-top: 2%;
+}
+
+.signContainer h5{
+    text-align: center;
+    color: rgb(88, 86, 86);
+}
+#empty{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.email, .password{
+    border-color:darkgray;
+    border-width: 2px;
+}
+.btn-social{
+    text-align: center;
+    width:100%;
+    margin: 4% 1%;
+    height:5%;
+}
+
+@media (max-width: 680px){
+    .heading-title{
+        font-size: 1.5rem;
+    }
+    .navbar-brand{
+        font-size: 1.3rem;
+        margin-left: -8%;
+    }
+    .navbar ul{
+        font-size: 1rem;
+        margin-left: -10%;
+    }
+    .signContainer h5{
+        font-size: 1rem;
+    }
+    .label{
+        font-size: 1.8rem;
+    }
+    .recipe-info{
+        margin-left: -60px;
+    }
+}

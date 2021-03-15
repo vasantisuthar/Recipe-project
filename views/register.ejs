@@ -1,0 +1,33 @@
+<%- include('header') -%>
+
+<div class="signContainer mt-5">
+    <h5>Create your account just in a minute and stay connected with us.</h5>
+        <div class="card mx-auto">
+          <div class="card-body">
+  
+            <!-- Makes POST request to /register route -->
+            <form action="/register" method="POST">
+              <% if(message.error) { %>
+                <small  class="text-danger"><%= message.error %></small>
+                <% } %>
+
+              <div class="form-group">
+                <input type="email" class="form-control email"  placeholder="Email" required name="username"/>
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control password" placeholder="********" onkeyup="manage(this)" name="password"/>
+              </div>
+              <button type="submit" class="btn btn-outline-success btn-md w-100 btSubmit" disabled>Register</button><br>
+          <p class="text-muted text-center">or</p>
+          <a class="btn btn-block btn-social btn-google" href="/auth/google" role="button">
+            <i class="fab fa-google"></i>
+            Sign Up with Google
+          </a>
+        </form>
+      </div>
+    </div>
+        <div class="mx-auto text-center">
+          <a href="#">Already have an account?</a><span><a href="/login">login</a></span>
+      </div>
+  </div>
+ <%- include('footer') -%>
