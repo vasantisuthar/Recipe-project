@@ -19,7 +19,7 @@ let data = '';
 let labels = [];
 
 
-mongoose.connect("mongodb+srv://admin-vasanti:test123@cluster0.mmek7.mongodb.net/myFirstDatabase?retryWrites=true/recipeDB", { useNewUrlParser: true, useCreateIndex:true, useUnifiedTopology: true, useFindAndModify : true });
+mongoose.connect(process.env.mongodb_uri, { useNewUrlParser: true, useCreateIndex:true, useUnifiedTopology: true, useFindAndModify : true });
 const connection = mongoose.connection;
 connection.once('open', () => {
     console.log('Database connected...');
@@ -31,12 +31,12 @@ mongoose.set("useCreateIndex", true);
 
 
 var store = new MongoDbStore({
-    uri: 'mongodb://localhost:27017/recipeDB',
+    uri: process.env.uri,
     collection: 'mySessions'
   });
 
 app.use(session({
-    secret : "my little secret",
+    secret : process.env.cookie,
     resave: false,
     store:store,
     saveUninitialized : false,
