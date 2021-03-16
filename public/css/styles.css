@@ -65,7 +65,6 @@ ul li, .urlLabel{
 }
 .recipe-info{
     margin-top: 22px;
-    right: auto;
     left: 100px;
 }
 .label{
@@ -88,6 +87,7 @@ ul li, .urlLabel{
 .recipeCntainer{
     padding: 3%;
     padding-left : 12%;
+    right: -50px;
 }
 .recipeImg{
     border: 8px solid #ddd;
@@ -171,6 +171,9 @@ ul li, .urlLabel{
     margin: 4% 1%;
     height:5%;
 }
+.fluid-row{
+    margin-right: 20px;
+}
 
 @media (max-width: 680px){
     .heading-title{
@@ -193,7 +196,14 @@ ul li, .urlLabel{
     .recipe-info{
         margin-left: -60px;
     }
-}
-.fluid-container .header{
-    margin-right: 100px;
+    .fluid-row{
+        margin-right: 100px;
+    }
+    .recipeCntainer{
+        left: 10px;
+    }
+    #ingredient-sectin{
+        margin-left: 60px;
+    }
+   
 }
