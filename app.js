@@ -258,8 +258,8 @@ app.post('/login', (req, res) =>{
 });
 app.get('/logout', (req, res) => {
          req.logout();
-        res.redirect('/');
-        // labels = [];
+        res.redirect('/login');
+        labels = [];
 })
 app.post("/delete", (req, res) => {
     const selectedItem = req.body.recipe;
